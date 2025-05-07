@@ -64,6 +64,8 @@ services:
       - .env
     working_dir: /zeppelin/backend
     command: ["npm", "run", "start-api-prod"]
+    ports:
+      - "${STANDALONE_API_PORT}:3001"
 
   bot:
     depends_on:
